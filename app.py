@@ -137,7 +137,7 @@ def main():
             col1, col2 = st.columns([1, 3])
             with col1:
                 if selected_playlist['images']:
-                    st.image(selected_playlist['images'][0]['url'], use_column_width=True)
+                    st.image(selected_playlist['images'][0]['url'], use_container_width=True)
             with col2:
                 st.markdown(f"""
                     <h2>{selected_playlist['name']}</h2>
