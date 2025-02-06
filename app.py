@@ -231,8 +231,8 @@ def get_recommendations(song_list, num_songs, release_year, tempo, energy, mood)
 
         # Build dynamic prompt
         prompt = f"""
-        Recommend {num_songs} songs that you think I would like based on these tracks: {', '.join(song_list)}.
-        {"Maintain similar style but with these adjustments: " + ", ".join(adjustments) + "." if adjustments else ""}
+        Recommend {num_songs} songs that you think I would like based on the fact I like these: {', '.join(song_list)}.
+        {"Remember to match the style of the songs listed above, but with these slight adjustments: " + ", ".join(adjustments) + "." if adjustments else ""}
         Return only a numbered list with artist and title.
         Format as: 1. Artist - Song Title
         """
