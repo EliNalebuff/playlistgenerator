@@ -239,7 +239,7 @@ def get_recommendations(song_list, num_songs, release_year, tempo, energy, mood)
 
         # Get AI response
         response = client.chat.completions.create(
-            model="deepseek-chat",
+            model="deepseek-reasoner",
             messages=[
                 {"role": "system", "content": "You are a music recommendation expert."},
                 {"role": "user", "content": prompt}
